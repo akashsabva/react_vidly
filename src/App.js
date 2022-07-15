@@ -12,6 +12,8 @@ import NotFound from './components/notFound';
 import MovieDetails from './components/movieDetails';
 import LoginForm from './components/loginForm';
 import RegisterForm from './components/registerForm';
+import MovieForm from './components/movieForm';
+import Crud from './components/crud';
 
 // function App() {
   
@@ -87,11 +89,13 @@ class App extends Component {
             <Counters counters={this.state.counters} onDelete={this.onDeleteHandle} onReset={this.onReset} onIncrement={this.onIncrement} onDecrement={this.onDecrement}></Counters>
             
         </main>
+        
         <NavBarVidly></NavBarVidly>
         <main role="main" className="container py-5">
           <Switch>
             <Route path="/register" component={RegisterForm}></Route>
             <Route path="/login" component={LoginForm}></Route>
+            <Route path="/movies/new" component={MovieForm}></Route>
             <Route path="/movies/:id" component={MovieDetails}></Route>
             <Route path="/movies" component={Movie}></Route>
             <Route path="/customers" component={Customers}></Route>
@@ -108,6 +112,10 @@ class App extends Component {
             <Route path="/" exact component={Movie}></Route>
             <Redirect to="/notFound"></Redirect> */}
           </Switch>
+        </main>
+
+        <main role="main" className="container py-5">
+          <Crud></Crud>
         </main>
       </React.Fragment>
     );
