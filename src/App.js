@@ -93,7 +93,7 @@ class App extends Component {
         <NavBarVidly></NavBarVidly>
         <main role="main" className="container py-5">
           <Switch>
-            {/* <Route path="/register" component={RegisterForm}></Route> */}
+            <Route path="/register" component={RegisterForm}></Route>
             <Route path="/login" component={LoginForm}></Route>
             <Route path="/movies/new" component={MovieForm}></Route>
             <Route path="/movies/:id" component={MovieDetails}></Route>
